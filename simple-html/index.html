@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>PCM - High Net Worth Coverage Services</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-gray-50 text-gray-900 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="fixed top-2 md:top-6 w-full z-30">           
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="relative flex items-center justify-between gap-3 h-14 rounded-2xl px-3 backdrop-blur-sm bg-white/90 shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100),theme(colors.gray.200))_border-box] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] before:[mask-composite:exclude_!important] before:pointer-events-none">
+
+                    <!-- Site branding -->
+                    <div class="flex-1 flex items-center">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="index.html" aria-label="PCM">
+                            <img src="./images/PCM-logo-Symbol-above.png" width="40" height="40" alt="PCM Logo" />
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="text-sm flex grow justify-center flex-wrap items-center gap-4 lg:gap-8">
+                            <li class="px-3 py-1">
+                                <a class="text-gray-700 hover:text-gray-900 flex items-center transition" href="#services">Services</a>
+                            </li>
+                            <li class="px-3 py-1">
+                                <a class="text-gray-700 hover:text-gray-900 flex items-center transition" href="#expertise">Expertise</a>
+                            </li>
+                            <li class="px-3 py-1">
+                                <a class="text-gray-700 hover:text-gray-900 flex items-center transition" href="#about">About Us</a>
+                            </li>
+                            <li class="px-3 py-1">
+                                <a class="text-gray-700 hover:text-gray-900 flex items-center transition" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                    <ul class="flex-1 flex justify-end items-center gap-3">
+                        <li>
+                            <a class="btn-sm text-gray-200 bg-gray-800 hover:bg-gray-900 shadow" href="#contact">Get Started</a>
+                        </li>
+                    </ul>                    
+                    
+                    <!-- Mobile menu -->
+                    <div class="flex md:hidden" x-data="{ expanded: false }">
+
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-gray-800 bg-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] translate-x-[7px] group-[[aria-expanded=true]]:rotate-[315deg] group-[[aria-expanded=true]]:translate-y-0 group-[[aria-expanded=true]]:translate-x-0" y="7" width="9" height="2" rx="1"></rect>
+                                <rect class="origin-center group-[[aria-expanded=true]]:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-[[aria-expanded=true]]:rotate-[135deg] group-[[aria-expanded=true]]:translate-y-0" y="7" width="9" height="2" rx="1"></rect>
+                            </svg>
+                        </button>                        
+
+                        <!-- Mobile navigation -->
+                        <nav
+                            id="mobile-nav"
+                            class="absolute top-full z-20 left-0 w-full bg-white rounded-xl shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:rounded-2xl before:bg-gray-900 before:pointer-events-none before:-z-10"
+                            @click.outside="expanded = false"
+                            @keydown.escape.window="expanded = false"
+                            x-show="expanded"
+                            x-transition:enter="transition ease-out duration-200 transform"
+                            x-transition:enter-start="opacity-0 -translate-y-2"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-out duration-200"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"                    
+                            x-cloak
+                        >
+                            <ul class="text-sm p-2">
+                                <li>
+                                    <a class="flex text-gray-700 hover:bg-gray-100 rounded-lg py-1.5 px-2" href="#services">Services</a>
+                                </li>
+                                <li>
+                                    <a class="flex text-gray-700 hover:bg-gray-100 rounded-lg py-1.5 px-2" href="#expertise">Expertise</a>
+                                </li>
+                                <li>
+                                    <a class="flex text-gray-700 hover:bg-gray-100 rounded-lg py-1.5 px-2" href="#about">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="flex text-gray-700 hover:bg-gray-100 rounded-lg py-1.5 px-2" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+            
+            <!-- Hero -->
+            <section class="relative min-h-screen flex items-center">
+                <!-- Hero image -->
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-50 z-0">
+                    <img src="./images/hero-image-01.png" alt="Hero background" class="w-full h-full object-cover opacity-50" />
+                </div>
+
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+
+                    <!-- Hero content -->
+                    <div class="text-center">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" data-aos="fade-up">Securing Your Wealth <br class="max-lg:hidden" />with PCM Solutions</h1>
+                        <div class="max-w-3xl mx-auto">
+                            <p class="text-lg text-gray-200 mb-8" data-aos="fade-up" data-aos-delay="150">Paslawski Capital Management Limited offers premium high net worth coverage services, tailored to protect and grow your assets in today's complex financial landscape.</p>
+                            <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="fade-up" data-aos-delay="300">
+                                <a class="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#contact">Schedule a Consultation</a>
+                                <a class="btn text-gray-300 bg-gray-800 hover:bg-gray-700 hover:text-white w-full sm:w-auto sm:ml-4" href="#services">Our Services</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="bg-gray-100 py-16 md:py-24">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20">
+
+                        <!-- Section header -->
+                        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Comprehensive High Net Worth Services</h2>
+                            <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="150">PCM offers a suite of tailored services designed to protect and grow your wealth.</p>
+                        </div>
+
+                        <!-- Services grid -->
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                                <h3 class="font-medium text-gray-800 mb-2">Asset Protection</h3>
+                                <p class="text-sm text-gray-600">Safeguard your wealth with our comprehensive asset protection strategies, designed to shield your assets from potential risks and liabilities.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="250">
+                                <h3 class="font-medium text-gray-800 mb-2">Wealth Management</h3>
+                                <p class="text-sm text-gray-600">Our expert team provides personalized wealth management solutions to help you grow and preserve your assets for generations to come.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                                <h3 class="font-medium text-gray-800 mb-2">Estate Planning</h3>
+                                <p class="text-sm text-gray-600">Ensure your legacy with our comprehensive estate planning services, tailored to your unique needs and goals.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="350">
+                                <h3 class="font-medium text-gray-800 mb-2">Tax Optimization</h3>
+                                <p class="text-sm text-gray-600">Maximize your wealth with our tax optimization strategies, designed to minimize your tax burden while ensuring full compliance.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                                <h3 class="font-medium text-gray-800 mb-2">Risk Management</h3>
+                                <p class="text-sm text-gray-600">Protect your assets with our comprehensive risk management solutions, tailored to address the unique challenges faced by high net worth individuals.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="450">
+                                <h3 class="font-medium text-gray-800 mb-2">Investment Advisory</h3>
+                                <p class="text-sm text-gray-600">Benefit from our expert investment advice, carefully curated to align with your financial goals and risk tolerance.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expertise -->
+            <section id="expertise" class="relative py-16 md:py-24 before:absolute before:inset-0 before:bg-gray-900 before:-z-20">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20">
+
+                        <!-- Section header -->
+                        <div class="max-w-3xl mx-auto text-center pb-16 md:pb-20">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-200 mb-4" data-aos="fade-up">Why Choose PCM for Your High Net Worth Coverage</h2>
+                            <p class="text-lg text-gray-400" data-aos="fade-up" data-aos-delay="150">Experience unparalleled expertise and personalized service</p>
+                        </div>
+
+                        <!-- Expertise grid -->
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                                <h3 class="font-medium text-gray-800 mb-2">Tailored Solutions</h3>
+                                <p class="text-sm text-gray-600">We craft bespoke strategies that align perfectly with your unique financial situation and goals.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="250">
+                                <h3 class="font-medium text-gray-800 mb-2">Industry Expertise</h3>
+                                <p class="text-sm text-gray-600">Our team of seasoned professionals brings decades of experience in high net worth wealth management.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                                <h3 class="font-medium text-gray-800 mb-2">Holistic Approach</h3>
+                                <p class="text-sm text-gray-600">We consider all aspects of your financial life to provide comprehensive, integrated solutions.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="350">
+                                <h3 class="font-medium text-gray-800 mb-2">Cutting-edge Technology</h3>
+                                <p class="text-sm text-gray-600">Leverage advanced financial tools and analytics to make informed decisions and track your wealth.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                                <h3 class="font-medium text-gray-800 mb-2">Global Perspective</h3>
+                                <p class="text-sm text-gray-600">Our international expertise allows us to navigate complex global financial landscapes.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="450">
+                                <h3 class="font-medium text-gray-800 mb-2">Discretion and Privacy</h3>
+                                <p class="text-sm text-gray-600">We prioritize the confidentiality and security of your financial information at all times.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="bg-gray-100 py-16 md:py-24 relative before:absolute before:inset-0 before:h-[120%] before:pointer-events-none before:bg-gradient-to-b before:from-gray-100 before:-z-10">            
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Trusted by Industry Leaders</h2>
+                        <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="150">Our clients include some of the most successful individuals and families across various industries.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                            <blockquote class="text-gray-800 mb-4">"PCM's expertise has been invaluable in managing and growing our family's wealth. Their personalized approach sets them apart."</blockquote>
+                            <cite class="text-sm text-gray-600">- John D., CEO</cite>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="250">
+                            <blockquote class="text-gray-800 mb-4">"The team at PCM has consistently delivered exceptional results. Their global perspective has been crucial for our international investments."</blockquote>
+                            <cite class="text-sm text-gray-600">- Sarah L., Entrepreneur</cite>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+                            <blockquote class="text-gray-800 mb-4">"PCM's risk management strategies have given us peace of mind. They truly understand the unique needs of high net worth individuals."</blockquote>
+                            <cite class="text-sm text-gray-600">- Michael R., Private Investor</cite>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA -->
+            <section id="contact" class="bg-gray-900 py-16 md:py-24">                    
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="rounded-2xl text-center relative overflow-hidden shadow-xl before:absolute before:inset-0 before:rounded-2xl before:bg-gray-800 before:pointer-events-none before:-z-10" data-aos="zoom-y-out">
+                        <!-- Glow -->
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 -z-10" aria-hidden="true">
+                            <div class="w-[480px] h-56 rounded-full border-[20px] border-blue-500 blur-3xl will-change-[filter]"></div>
+                        </div>                      
+                        <!-- Stripes illustration -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 top-0 pointer-events-none -z-10" aria-hidden="true">
+                            <img class="max-w-none" src="./images/stripes-dark.svg" width="768" height="432" alt="Stripes" />
+                        </div>                         
+                        <div class="py-12 md:py-20 px-4 md:px-12">
+                            <h2 class="text-3xl md:text-4xl text-gray-200 font-bold mb-6 md:mb-12 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1]">Secure Your Financial Future with PCM</h2>
+                            <div class="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+                                <a class="btn text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full mb-4 sm:w-auto sm:mb-0 group" href="#0">
+                                    <span class="relative inline-flex items-center">
+                                        Schedule Your Consultation <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform ml-1">-&gt;</span>
+                                    </span>
+                                </a>
+                                <a class="btn text-gray-300 bg-gray-800 hover:bg-gray-700 hover:text-white shadow w-full sm:w-auto sm:ml-4" href="#services">Explore Our Services</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <!-- Site footer -->
+        <footer class="bg-gray-100 py-12 md:py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Top area: Blocks -->
+                <div class="grid sm:grid-cols-12 gap-10 py-8 md:py-12">
+
+                    <!-- 1st block -->
+                    <div class="sm:col-span-12 lg:col-span-4 space-y-2">
+                        <div>
+                            <!-- Logo -->
+                            <a class="inline-flex" href="index.html" aria-label="PCM">
+                                <img src="./images/PCM-logo-Symbol-above.png" width="40" height="40" alt="PCM Logo" />
+                            </a>
+                        </div>
+                        <div class="text-sm text-gray-600">
+                            &copy; Paslawski Capital Management Limited - All rights reserved.
+                        </div>
+                    </div>
+
+                    <!-- 2nd block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2 space-y-2">
+                        <h3 class="text-sm font-medium">Services</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Asset Protection</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Wealth Management</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Estate Planning</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Tax Optimization</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3rd block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2 space-y-2">
+                        <h3 class="text-sm font-medium">Company</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">About us</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Careers</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 4th block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2 space-y-2">
+                        <h3 class="text-sm font-medium">Resources</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Support Center</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Partners</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 5th block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2 space-y-2">
+                        <h3 class="text-sm font-medium">Legal</h3>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-900 transition" href="#0">Terms of Service</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./js/vendors/focus.min.js" defer></script><!-- Focus plugin: https://alpinejs.dev/plugins/focus -->
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
