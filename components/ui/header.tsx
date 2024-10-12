@@ -42,6 +42,14 @@ export default function Header() {
               </li>
               <li className="px-3 py-1">
                 <Link
+                  href="/blog"
+                  className="flex items-center text-gray-700 transition hover:text-gray-900"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li className="px-3 py-1">
+                <Link
                   href="/contact"
                   className="flex items-center text-gray-700 transition hover:text-gray-900"
                 >

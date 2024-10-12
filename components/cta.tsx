@@ -1,48 +1,28 @@
-import Image from "next/image";
-import Stripes from "@/public/images/stripes-dark.svg";
+import React from 'react'
+import Link from 'next/link'
 
-export default function Cta() {
+const Cta = () => {
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div
-          className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gray-900"
-          data-aos="zoom-y-out"
+    <section className="bg-gradient-to-r from-teal-400 to-teal-600 text-white py-24 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0 0 L50 100 L100 0 Z" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">Ready to Secure Your Financial Future?</h2>
+        <p className="text-xl md:text-2xl mb-10 animate-fade-in-up animation-delay-200">
+          Let's work together to create a personalized financial strategy that meets your unique needs and goals.
+        </p>
+        <Link 
+          href="/contact" 
+          className="inline-block bg-white text-teal-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-400"
         >
-          {/* Glow */}
-          <div
-            className="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2"
-            aria-hidden="true"
-          >
-            <div className="h-56 w-[480px] rounded-full border-[20px] border-blue-500 blur-3xl will-change-[filter]" />
-          </div>
-          {/* Stripes illustration */}
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-            aria-hidden="true"
-          >
-            <Image className="max-w-none" src={Stripes} alt="Stripes" />
-          </div>
-          <div className="px-4 py-12 md:px-12 md:py-20">
-            <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Create your next project with Simple
-            </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <a
-                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="#0"
-              >
-                <span className="relative inline-flex items-center">
-                  Start Free Trial{" "}
-                  <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
+          Get Started Today
+        </Link>
       </div>
     </section>
-  );
+  )
 }
+
+export default Cta

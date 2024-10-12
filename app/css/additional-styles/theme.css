@@ -118,3 +118,12 @@
 [data-rehype-pretty-code-title] + pre {
   @apply mt-0 rounded-t-none border-t-0;
 }
+
+/* Custom scaling for the entire page */
+body {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125%; /* Compensate for the scaling to avoid horizontal scrollbar */
+  height: 125%; /* Compensate for the scaling to avoid vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}

@@ -1,72 +1,62 @@
-import { getBlogPosts } from "@/components/mdx/utils";
-import PageIllustration from "@/components/page-illustration";
-import PostItem from "@/components/post-item";
+import React from 'react'
+import Link from 'next/link'
 
 export const metadata = {
-  title: "Blog - Simple",
-  description: "Page description",
+  title: "PCM Financial Services - Blog and Resources",
+  description: "Insights and resources on financial planning, wealth management, and succession planning for individuals and businesses in Saskatchewan and Alberta.",
 };
 
-export default function Blog() {
-  const allBlogs = getBlogPosts();
+const blogPosts = [
+  {
+    title: "5 Essential Farm Succession Planning Tips",
+    excerpt: "Ensure a smooth transition for your agricultural business with these key succession planning strategies.",
+    date: "2023-05-15",
+    slug: "farm-succession-planning-tips"
+  },
+  {
+    title: "Wealth Management Strategies for High Net Worth Individuals",
+    excerpt: "Discover effective wealth management techniques tailored for high net worth individuals in Saskatchewan and Alberta.",
+    date: "2023-05-01",
+    slug: "wealth-management-high-net-worth"
+  },
+  {
+    title: "Navigating Business Financial Planning in Alberta",
+    excerpt: "Learn about the unique aspects of financial planning for businesses in Alberta's dynamic economic landscape.",
+    date: "2023-04-20",
+    slug: "business-financial-planning-alberta"
+  }
+]
 
-  // Sort posts by date
-  allBlogs.sort((a, b) => {
-    return new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-      ? -1
-      : 1;
-  });
-
+const BlogPage = () => {
   return (
-    <section className="relative">
-      <PageIllustration />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Main content */}
-        <div className="mx-auto max-w-3xl pb-12 pt-32 md:pb-20 md:pt-40">
-          {/* Section header */}
-          <div className="pb-16">
-            <h1 className="mb-4 text-5xl font-bold">The Simple blog</h1>
-            <p className="text-lg text-gray-700">
-              Content for developers, product, and digital experts.
-            </p>
+    <section className="bg-gradient-to-b from-gray-100 to-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+          <div className="text-center pb-12 md:pb-16">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4">Blog and Resources</h1>
+            <div className="max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8">Stay informed with the latest insights on financial planning, wealth management, and more.</p>
+            </div>
           </div>
-          {/*Categories */}
-          <div className="mb-10 flex flex-wrap gap-2">
-            <button className="btn-sm bg-gray-800 font-normal text-gray-200 shadow hover:bg-gray-900">
-              All
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow hover:bg-gray-50">
-              Interviews
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow hover:bg-gray-50">
-              Inspiration
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow hover:bg-gray-50">
-              Updates
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow hover:bg-gray-50">
-              Product
-            </button>
-            <button className="btn-sm bg-white font-normal text-gray-800 shadow hover:bg-gray-50">
-              Miscellaneous
-            </button>
-          </div>
-
-          <div className="space-y-10 border-l [border-image:linear-gradient(to_bottom,theme(colors.slate.200),theme(colors.slate.300),transparent)1]">
-            {allBlogs.map((post, postIndex) => (
-              <PostItem key={postIndex} {...post} />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.map((post, index) => (
+              <article key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+                <div className="p-6">
+                  <h2 className="text-xl font-bold mb-2">
+                    <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:text-blue-800">
+                      {post.title}
+                    </Link>
+                  </h2>
+                  <p className="text-gray-600 text-sm mb-4">{post.date}</p>
+                  <p className="text-gray-700">{post.excerpt}</p>
+                </div>
+              </article>
             ))}
-          </div>
-
-          {/* Load more */}
-          <div className="mt-12 text-center">
-            <button className="btn-sm min-w-[220px] bg-gray-800 py-1.5 text-gray-200 shadow hover:bg-gray-900">
-              Load more{" "}
-              <span className="ml-2 tracking-normal text-gray-500">↓</span>
-            </button>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
+
+export default BlogPage
