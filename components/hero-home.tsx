@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
             <div className="md:w-1/2 md:pl-10">
               <Image
-                src="/images/saskatchewan-alberta-landscape.jpg"
+                src="/images/saskatchewan-alberta-placeholder.svg"
                 alt="Saskatchewan and Alberta Landscape"
                 width={600}
                 height={400}
